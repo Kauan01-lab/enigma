@@ -1,0 +1,278 @@
+/* =====================================================
+   CONFIGURAÇÃO GERAL
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0b0f;
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   ÁREA DO JOGO
+   ===================================================== */
+
+#jogo {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px 150px;
+}
+
+
+/* =====================================================
+   ENIGMA
+   ===================================================== */
+
+.enigma {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
+
+.enigma h1 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   IMAGEM
+   ===================================================== */
+
+#imagem {
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto;
+}
+
+#imagem img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 450px;
+    max-height: 260px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+
+/* =====================================================
+   TEXTO ABAIXO DA IMAGEM
+   ===================================================== */
+
+.enigma p {
+    max-width: 550px;
+
+    margin: 15px auto 0;
+
+    color: #aaaaaf;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CAMPO DE RESPOSTA
+   ===================================================== */
+
+.area-resposta {
+    position: fixed;
+
+    bottom: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 280px;
+    max-width: 75%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    z-index: 10;
+}
+
+
+/* Campo */
+
+#resposta {
+    width: 100%;
+    height: 32px;
+
+    padding: 0 10px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 5px;
+
+    outline: none;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+#resposta::placeholder {
+    color: #66666f;
+}
+
+#resposta:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =====================================================
+   BOTÃO
+   ===================================================== */
+
+#botao-resposta {
+    flex: 0 0 32px;
+
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+
+    height: 32px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #888888;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+#botao-resposta:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+
+/* =====================================================
+   TELA FINAL
+   ===================================================== */
+
+#final {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: #0b0b0f;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+#final.ativo {
+    display: flex;
+}
+
+.final-conteudo {
+    width: min(600px, 90%);
+}
+
+.final-conteudo h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.final-conteudo p {
+    color: #777780;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    #jogo {
+        padding: 25px 15px 120px;
+    }
+
+    .enigma {
+        width: 100%;
+    }
+
+    .enigma h1 {
+        font-size: 10px;
+    }
+
+    #imagem img {
+        max-width: 90%;
+        max-height: 220px;
+    }
+
+    .enigma p {
+        font-size: 10px;
+        line-height: 1.45;
+    }
+
+    .area-resposta {
+        bottom: 18px;
+        width: 230px;
+        max-width: 80%;
+    }
+
+    #resposta {
+        height: 28px;
+        font-size: 11px;
+    }
+
+    #botao-resposta {
+        width: 28px;
+        min-width: 28px;
+        max-width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .final-conteudo h1 {
+        font-size: 32px;
+    }
+}
