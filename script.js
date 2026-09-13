@@ -33,6 +33,43 @@
 
 
 const enigmas = [
+    
+    {
+        texto:  "Quantas cores?",
+        resposta: "7",
+        imagem: "imagens/IMAGEM1.webp"
+    },
+
+    {
+        texto:  "Meu aluno mais conhecido",
+        resposta: "Aristoteles",
+        imagem: "imagens/IMAGEM2.jpg"
+    },
+
+    {
+        texto:  "20 + 26",
+        resposta: "cafe",
+        imagem: "imagens/IMAGEM3.jpg"
+    },
+
+    {
+        titulo: "Quem morreu?",
+        texto:  "..--- ---.. / -.. . / .--- ..- .-.. .... --- / -.. . / .---- ----. .---- ....-",
+        resposta: "arquiduque",
+    },
+
+    {
+        titulo: "AMA GRANA",
+        texto:  "cailtap",
+        resposta: "Estocolmo",
+        imagem: "imagens/IMAGEM4.webp"
+    },
+
+    {
+        texto:  "uggcf://cg.jvxvcrqvn.bet/jvxv/Frevatn",
+        resposta: "seringa",
+        imagem: "imagens/IMAGEM5.JPG"
+    },
 
     {
         texto:  "50.15748281060472, 29.65790444045449",
